@@ -17,15 +17,9 @@ for i in range(2, int(x**0.5)): # 2 -> sqrt(x)
 		print(i, ' * ', int(x/i))
 		factors.append(i)
 		factors.append(int(x/i))
-		
+
 list.sort(factors, reverse=True)
 print('A list of factors in descending order of largeness: ', factors)
 
 # find largest prime
-answer = -1
-for factor in factors:
-	if isPrime(factor):
-		answer = factor
-		break
-
-print(answer) # = 6857
+print([x for x in factors if isPrime(x)][0]) # = 6857
