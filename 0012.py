@@ -20,7 +20,7 @@ What is the value of the first triangle number to have over five hundred divisor
 '''
 
 def findFactors(x):
-	return [(y,int(x/y)) for y in range(1,int(x**0.5)) if x%y==0]
+	return [set((y,int(x/y))) for y in range(1,int(x**0.5)+1) if x%y==0]
 
 triNum = 0
 
